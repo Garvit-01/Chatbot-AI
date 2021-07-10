@@ -1,4 +1,4 @@
-{ "intents" : [
+{"intents" : [
     {"tag": "greetings",
     "patterns": ["hello","hi","hey","good day", "what's up?"],
     "responses": ["hello", "Hey!", "What can I do for you?"]
@@ -12,10 +12,12 @@
     "patterns": ["Goodbye","cya","see you later","bye bye!", "see ya!"],
     "responses": ["Goodbye", "Talk to you later", "TTYL","Will talk tomorrow"]
     },
+
     {"tag": "weather",
     "patterns": ["Is it raining outside?","How is the weather outside?"],
     "responses": ["Shinning outside", "It is not raining but it is cloudy"]
     },
+
     {"tag": "Name",
     "patterns": ["What should I call you","What is your good name?","Sorry, I forgot to ask your name","Who are you?"],
     "responses": ["Infinity", "You can call me Infinity", "I'm infinity"]

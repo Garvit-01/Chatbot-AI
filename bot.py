@@ -13,8 +13,8 @@ lemmatizer = WordNetLemmatizer()
 # Loading the JSON file & Reading it
 intents = json.loads(open('intents.json').read())
 
-words = pickle.load(open('words.pkl','rb'))
-classes = pickle.load(open('classes.pkl','rb'))
+words = pickle.load(open('words.pkl', 'rb'))
+classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('chatbotmodel.h5')
 
 def clean_up_sentence(sentence):
@@ -47,12 +47,11 @@ def predict_class(sentence):
 def get_response(intents_list, intents_json):
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']
-    # result = 'responses'
     for i in list_of_intents:
         if i['tag'] == tag:
             result = random.choice(i['responses'])
-            break
-    return result
+            return result
+
 
 print("Bot is running")
 
